@@ -1,17 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script src="https://kit.fontawesome.com/6df1c8709c.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <title>Realizacje </title>
 </head>
+
 <body style="font-family: 'Montserrat', serif;">
-<main>
-    
-</main>
+    <nav>
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" title="Strona główna">
+                    <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+                    Strona główna
+                </a></li>
+            <li><a href="uslugi.html" title="Usługi">
+                    <i class="fa-solid fa-toolbox fa-2xl" style="color: #ffffff;"></i>
+                    Usługi
+                </a></li>
+            <li><a href="realizacje.html" title="Realizacje">
+                    <i class="fa-solid fa-helmet-safety fa-2xl" style="color: #ffffff;"></i>
+                    Realizacje
+                </a></li>
+            <li><a href="kalkulator.html" title="Kalkulator">
+                    <i class="fa-solid fa-calculator fa-2xl" style="color: #ffffff;"></i>
+                    Kalkulator
+                </a></li>
+            <li><a href="ofirma.html" title="Informacje o Firmie">
+                    <i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i>
+                    O firmie
+                </a></li>
+            <li><a href="kontakty.html" title="Kontakt">
+                    <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i>
+                    Kontakt
+                </a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="gallery-section">
+            <h2 class="center">Galeria Realizacji</h2>
+            <div class="filter-buttons center">
+                <button class="filter-btn active" onclick="filterGallery('all')">Wszystkie</button>
+                <button class="filter-btn" onclick="filterGallery('domy')">Domy</button>
+                <button class="filter-btn" onclick="filterGallery('lazienki')">Łazienki</button>
+                <button class="filter-btn" onclick="filterGallery('elewacje')">Elewacje</button>
+            </div>
+            <div class="gallery-grid">
+                <!-- Karta 1 -->
+                <div class="project-card domy">
+                    <img src="images/budowa1.jpg" alt="Dom 1" class="thumb"
+                        onclick="document.getElementById('modal1').style.display='block'">
+                    <div class="project-info">
+                        <h3>Nowoczesny dom</h3>
+                        <p><strong>Data:</strong> 2023</p>
+                        <p><strong>Lokalizacja:</strong> Warszawa</p>
+                        <p>Kompleksowa budowa domu jednorodzinnego.</p>
+                    </div>
+                </div>
+                <!-- Karta 2 -->
+                <div class="project-card lazienki">
+                    <img src="images/lazienka1.jpg" alt="Łazienka" class="thumb"
+                        onclick="document.getElementById('modal2').style.display='block'">
+                    <div class="project-info">
+                        <h3>Remont łazienki</h3>
+                        <p><strong>Data:</strong> 2024</p>
+                        <p><strong>Lokalizacja:</strong> Kraków</p>
+                        <p>Glazura, terakota i nowoczesna armatura.</p>
+                    </div>
+                </div>
+            
+
+            <!-- Karta 3 -->
+            <div class="project-card elewacje">
+                <img src="images/docieplenia.jpg" alt="Elewacja domu" class="thumb"
+                    onclick="document.getElementById('modal3').style.display='block'">
+                <div class="project-info">
+                    <h3>Nowa elewacja</h3>
+                    <p><strong>Data:</strong> 2022</p>
+                    <p><strong>Lokalizacja:</strong> Gdańsk</p>
+                    <p>Nowoczesna elewacja z ociepleniem i tynkiem silikonowym.</p>
+                </div>
+            </div>
+
+            <!-- Karta 4 -->
+            <div class="project-card domy">
+                <img src="images/budowa2.jpg" alt="Dom 2" class="thumb"
+                    onclick="document.getElementById('modal4').style.display='block'">
+                <div class="project-info">
+                    <h3>Dom w zabudowie bliźniaczej</h3>
+                    <p><strong>Data:</strong> 2021</p>
+                    <p><strong>Lokalizacja:</strong> Poznań</p>
+                    <p>Budowa bliźniaka w stanie deweloperskim z dachem dwuspadowym.</p>
+                </div>
+            </div>
+
+            <!-- Karta 5 -->
+            <div class="project-card lazienki">
+                <img src="images/lazienka2.jpg" alt="Łazienka nowoczesna" class="thumb"
+                    onclick="document.getElementById('modal5').style.display='block'">
+                <div class="project-info">
+                    <h3>Łazienka glamour</h3>
+                    <p><strong>Data:</strong> 2023</p>
+                    <p><strong>Lokalizacja:</strong> Katowice</p>
+                    <p>Złote dodatki, marmur, podświetlane lustra.</p>
+                </div>
+            </div>
+            
+            <!-- MODAL 1 -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('modal1').style.display='none'">&times;</span>
+                    <img src="images/budowa1.jpg" alt="Dom 1">
+                    <div class="modal-desc">
+                        <h3>Nowoczesny dom w Warszawie</h3>
+                        <p>Projekt obejmował pełną budowę od podstaw, w tym instalacje i elewacje.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL 2 -->
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('modal2').style.display='none'">&times;</span>
+                    <img src="images/lazienka1.jpg" alt="Łazienka">
+                    <div class="modal-desc">
+                        <h3>Remont łazienki w Krakowie</h3>
+                        <p>Nowoczesna łazienka z oświetleniem LED, glazurą i wysokiej klasy materiałami.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL 3 -->
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('modal3').style.display='none'">&times;</span>
+                    <img src="images/docieplenia.jpg" alt="Elewacja">
+                    <div class="modal-desc">
+                        <h3>Elewacja w Gdańsku</h3>
+                        <p>Projekt polegał na ociepleniu budynku oraz wykonaniu nowoczesnej, trwałej elewacji w jasnych
+                            kolorach.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL 4 -->
+            <div id="modal4" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('modal4').style.display='none'">&times;</span>
+                    <img src="images/budowa2.jpg" alt="Dom 2">
+                    <div class="modal-desc">
+                        <h3>Bliźniak w Poznaniu</h3>
+                        <p>Dom o powierzchni 160 m², z ogrzewaniem podłogowym i instalacją fotowoltaiczną.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL 5 -->
+            <div id="modal5" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="document.getElementById('modal5').style.display='none'">&times;</span>
+                    <img src="images/lazienka2.jpg" alt="Łazienka glamour">
+                    <div class="modal-desc">
+                        <h3>Łazienka w stylu glamour</h3>
+                        <p>Pełna renowacja łazienki z wykorzystaniem materiałów premium, złotych baterii i marmurowych
+                            płytek.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+
+    </main>
+    <script>
+        function filterGallery(category) {
+            const cards = document.querySelectorAll('.project-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            cards.forEach(card => {
+                if (category === 'all' || card.classList.contains(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+    <script src="style/menu.js"></script>
 </body>
+
 </html>
