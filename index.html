@@ -11,33 +11,38 @@
 </head>
 <body style="font-family: 'Montserrat', serif;">
     <nav>
-        <a href="index.html" title="Strona główna">
+        <div class="burger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+        <li><a href="index.html" title="Strona główna">
             <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
             Strona główna
-        </a>
-        <a href="uslugi.html" title="Usługi">
+        </a></li>
+        <li><a href="uslugi.html" title="Usługi">
             <i class="fa-solid fa-toolbox fa-2xl" style="color: #ffffff;"></i>
             Usługi
-        </a>
-        <a href="realizacje.html" title="Realizacje">
+        </a></li>
+        <li><a href="realizacje.html" title="Realizacje">
             <i class="fa-solid fa-helmet-safety fa-2xl" style="color: #ffffff;"></i>
             Realizacje
-        </a>
-        <a href="kalkulator.html" title="Kalkulator">
+        </a></li>
+        <li><a href="kalkulator.html" title="Kalkulator">
             <i class="fa-solid fa-calculator fa-2xl" style="color: #ffffff;"></i>
             Kalkulator
-        </a>
-        <a href="ofirma.html" title="Informacje o Firmie">
+        </a></li>
+        <li><a href="ofirma.html" title="Informacje o Firmie">
             <i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i>
             O firmie
-        </a>
-        <a href="kontakty.html" title="Kontakt">
+        </a></li>
+        <li><a href="kontakty.html" title="Kontakt">
             <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i>
             Kontakt
-        </a>
+        </a></li>
+        </ul>
     </nav>
     <header class="banner">
-        <h1>Budujemy solidnie. <br>Remontujemy z głową.</h1>
+        <h2>Budujemy solidnie. <br>Remontujemy z głową.</h2>
         <a href="kontakty.html" >Skontaktuj się z nami</a>
     </header>
     <main>
@@ -102,5 +107,6 @@
         </div>
     </section>
     </main>
+    <script src="style/menu.js"></script>
 </body>
 </html>
