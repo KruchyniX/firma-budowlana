@@ -1,88 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://kit.fontawesome.com/6df1c8709c.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
-    <title>Strona główna</title>
+  <script src="https://kit.fontawesome.com/6df1c8709c.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Strona główna</title>
 </head>
+
 <body style="font-family: 'Montserrat', serif;">
-    <nav>
-        <div class="burger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-links">
-        <li><a href="index.html" title="Strona główna">
-            <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
-            Strona główna
-        </a></li>
-        <li><a href="uslugi.html" title="Usługi">
-            <i class="fa-solid fa-toolbox fa-2xl" style="color: #ffffff;"></i>
-            Usługi
-        </a></li>
-        <li><a href="realizacje.html" title="Realizacje">
-            <i class="fa-solid fa-helmet-safety fa-2xl" style="color: #ffffff;"></i>
-            Realizacje
-        </a></li>
-        <li><a href="kalkulator.html" title="Kalkulator">
-            <i class="fa-solid fa-calculator fa-2xl" style="color: #ffffff;"></i>
-            Kalkulator
-        </a></li>
-        <li><a href="ofirma.html" title="Informacje o Firmie">
-            <i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i>
-            O firmie
-        </a></li>
-        <li><a href="kontakty.html" title="Kontakt">
-            <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i>
-            Kontakt
-        </a></li>
-        </ul>
-    </nav>
-    <section class="contact-form">
-  <h2><i class="fas fa-calculator"></i> Kalkulator remontowy</h2>
-  <form>
-    <label>Typ usługi:
-      <select name="typ-uslugi" required>
-        <option value="">-- Wybierz --</option>
-        <option value="budowa">Budowa domu</option>
-        <option value="remont">Remont kompleksowy</option>
-        <option value="glazura">Glazura i terakota</option>
-        <option value="ocieplenie">Ocieplenie budynku</option>
-        <option value="mycie">Mycie elewacji</option>
-      </select>
-    </label>
-
-    <label>Powierzchnia (m²):
-      <input type="number" name="powierzchnia" min="1" required>
-    </label>
-
-    <label>Rodzaj materiału:
-      <select name="material" required>
-        <option value="">-- Wybierz --</option>
-        <option value="standard">Standardowy</option>
-        <option value="premium">Premium</option>
-        <option value="eko">Ekologiczny</option>
-      </select>
-    </label>
-
-    <fieldset>
-      <legend>Opcje dodatkowe:</legend>
-      <label><input type="checkbox" name="opcje" value="demontaz"> Demontaż</label><br>
-      <label><input type="checkbox" name="opcje" value="transport"> Transport</label>
-    </fieldset>
-
-    <div class="summary-box">
-      <h3>Podsumowanie:</h3>
-      <p>Wypełnij formularz, aby zobaczyć szczegóły.</p>
-      <!-- Możesz tu dodać JS lub PHP, jeśli kiedyś chcesz rozbudować -->
+  <nav>
+    <div class="burger" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
     </div>
+    <ul class="nav-links">
+      <li><a href="index.html" title="Strona główna">
+          <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+          Strona główna
+        </a></li>
+      <li><a href="uslugi.html" title="Usługi">
+          <i class="fa-solid fa-toolbox fa-2xl" style="color: #ffffff;"></i>
+          Usługi
+        </a></li>
+      <li><a href="realizacje.html" title="Realizacje">
+          <i class="fa-solid fa-helmet-safety fa-2xl" style="color: #ffffff;"></i>
+          Realizacje
+        </a></li>
+      <li><a href="kalkulator.html" title="Kalkulator">
+          <i class="fa-solid fa-calculator fa-2xl" style="color: #ffffff;"></i>
+          Kalkulator
+        </a></li>
+      <li><a href="ofirma.html" title="Informacje o Firmie">
+          <i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i>
+          O firmie
+        </a></li>
+      <li><a href="kontakty.html" title="Kontakt">
+          <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i>
+          Kontakt
+        </a></li>
+    </ul>
+  </nav>
+  <!-- Kalkulator -->
+  <section class="contact-form">
+    <h2><i class="fas fa-calculator"></i> Kalkulator remontowy</h2>
+    <form>
+      <label>Typ usługi:
+        <select name="typ-uslugi" required>
+          <option value="">-- Wybierz --</option>
+          <option value="budowa">Budowa domu</option>
+          <option value="remont">Remont kompleksowy</option>
+          <option value="glazura">Glazura i terakota</option>
+          <option value="ocieplenie">Ocieplenie budynku</option>
+          <option value="mycie">Mycie elewacji</option>
+        </select>
+      </label>
 
-    <button type="submit"><i class="fas fa-phone"></i> Zamów kontakt</button>
-  </form>
-</section>
-<script src="style/menu.js"></script>
+      <label>Powierzchnia (m²):
+        <input type="number" name="powierzchnia" min="1" required>
+      </label>
+
+      <label>Rodzaj materiału:
+        <select name="material" required>
+          <option value="">-- Wybierz --</option>
+          <option value="standard">Standardowy</option>
+          <option value="premium">Premium</option>
+          <option value="eko">Ekologiczny</option>
+        </select>
+      </label>
+
+      <fieldset>
+        <legend>Opcje dodatkowe:</legend>
+        <label><input type="checkbox" name="opcje" value="demontaz"> Demontaż</label><br>
+        <label><input type="checkbox" name="opcje" value="transport"> Transport</label>
+      </fieldset>
+
+      <div class="summary-box">
+        <h3>Podsumowanie:</h3>
+        <p>Wypełnij formularz, aby zobaczyć szczegóły.</p>
+      </div>
+
+      <button type="submit"><i class="fas fa-phone"></i> Zamów kontakt</button>
+    </form>
+  </section>
+  <script src="style/menu.js"></script>
 </body>
+
 </html>

@@ -11,6 +11,17 @@ header {
     text-align: center;
 }
 
+section {
+    margin-bottom: 30px;
+}
+
+main {
+    margin-right: 10%;
+    margin-left: 10%;
+    font-size: 1.2rem;
+}
+
+/* Nawigacja po stronie - nav */
 nav {
     width: 100%;
     padding-top: 5px;
@@ -22,6 +33,7 @@ nav {
     justify-items: center;
 }
 
+/* Domyślnie nie pokazuj burgera */
 .burger {
     display: none;
     font-size: 1.5rem;
@@ -29,13 +41,13 @@ nav {
     cursor: pointer;
 }
 
+/* Style listy podstron */
 .nav-links {
     margin: 0;
     list-style: none;
     display: flex;
     gap: 50px;
 }
-
 
 .nav-links li a {
     color: #222;
@@ -50,7 +62,7 @@ nav {
 }
 
 
-/* ▼ Burger menu below 600px */
+/* Dostosowanie nawigacji dla mniejszych ekranów */
 @media (max-width: 1200px) {
     .burger {
         display: block;
@@ -89,10 +101,7 @@ nav {
     }
 }
 
-section {
-    margin-bottom: 30px;
-}
-
+/* Baner głównej strony */
 .banner {
     background:
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
@@ -112,7 +121,7 @@ section {
     margin-bottom: 60px;
 }
 
-
+/* Ostylowanie odnośników */
 a {
     display: inline-block;
     padding: 12px 24px;
@@ -130,12 +139,8 @@ a:hover {
     transform: translateY(-2px);
 }
 
-main {
-    margin-right: 10%;
-    margin-left: 10%;
-    font-size: 1.2rem;
-}
 
+/* Box - kontener typu grid, używany np. do listy usług na głównej stronie */
 .box {
     display: grid;
     grid-template-columns: 1fr;
@@ -154,6 +159,7 @@ main {
     }
 }
 
+/* Element Box'a */
 .tile {
     position: relative;
     min-height: 300px;
@@ -164,6 +170,7 @@ main {
     text-align: center;
 }
 
+/* Element Box'a z dodatkową animacją po najechaniu */
 .tile-anim {
     position: relative;
     min-height: 300px;
@@ -191,12 +198,12 @@ main {
     z-index: 0;
 }
 
-/* On hover, slide in diagonally */
+/* Animacja wjeżdża od boku pod kątem */
 .tile-anim:hover::after {
     transform: translate(0, 0) rotate(-45deg);
 }
 
-/* Text container stays on top */
+/* Tekst na elementach Box'a */
 .tile-text {
     position: relative;
     z-index: 1;
@@ -208,12 +215,13 @@ main {
     transition: background 0.4s ease, color 0.4s ease;
 }
 
-/* Remove black overlay + change text color when hovered */
+/* Usunięcie czarnej nakładki i zmiana koloru czcionki przy najechaniu na tekst, którego tile jest animowany */
 .tile-anim:hover .tile-text {
     background: transparent;
     color: #000;
 }
 
+/* Dodatkowe ustawienia dla klasy Box, rozszerzające style innych elementów */
 .tile-text>span {
     display: block;
     margin-top: 8px;
@@ -222,7 +230,6 @@ main {
 .tile>blockquote {
     color: black;
 }
-
 
 .tile>img {
     width: 80%;
@@ -239,19 +246,20 @@ main {
     color: #111;
 }
 
+/* Nadrzędny element serwisu */
 .service {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 30px;
     border: 1px solid #ccc;
     border-left: 6px solid #f7c600;
-    /* żółty akcent */
     border-radius: 6px;
     background-color: #fff;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+/* Podział serwisu na zdjęcie i informacje o serwisie: */
 .service-image {
     flex: 1 1 300px;
     min-height: 400px;
@@ -266,24 +274,27 @@ main {
     background-color: #f9f9f9;
 }
 
+/* Nazwa serwisu */
 .service-info h3 {
     color: #333;
     margin-top: 0;
     font-size: 1.4rem;
 }
 
+/* Ikony w żółtym kolorze, bo ikony z awesomefonts są jako znacznik "i" */
 .service-info i {
     color: #f7c600;
-    /* ikony w żółtym kolorze */
     margin-right: 8px;
 }
 
+/* Ostylowanie ceny usługi */
 .price {
     font-weight: bold;
     margin-top: 10px;
     color: #111;
 }
 
+/* Ostylowanie części szczegułów usług */
 details {
     background-color: #eee;
     border: 1px solid #ddd;
@@ -308,18 +319,15 @@ details ul {
     color: #444;
 }
 
-@media (max-width: 768px) {
+/* Zmiana przy mniejszych ekranach na ustawienie kolumnowe */
+@media (max-width: 1200px) {
     .service {
         flex-direction: column;
     }
 }
 
-/* Realizacje */
-
-/* Kalkulator */
-
 /* O firmie */
-/* Timeline (źródło w3schools) */
+/* Timeline - historia firmy (kod inspirowany w3schools tematem css timelines) */
 .timeline {
     position: relative;
     max-width: 1200px;
@@ -379,14 +387,14 @@ details ul {
     right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent white;
+    border-color: transparent transparent transparent rgb(0, 0, 0);
 }
 
 .right::before {
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+    border-color: transparent rgb(0, 0, 0) transparent transparent;
 }
 
 .right::after {
@@ -398,6 +406,7 @@ details ul {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    border: black 1px solid
 }
 
 /* Certyfikaty */
@@ -443,6 +452,7 @@ details ul {
     flex-wrap: wrap;
 }
 
+/* Normalnie parter jest lekko poszarzony, ale jak sie najedzie to robi się intensywniejszy kolor i większa ikonka */
 .partner img {
     height: 120px;
     filter: grayscale(0.25);
@@ -454,14 +464,15 @@ details ul {
     transform: scale(1.15);
 }
 
-/* RWD Timeline */
-@media screen and (max-width: 900px) {
+/* Responsywny timeline */
+@media screen and (max-width: 1200px) {
     .timeline::after {
         left: 31px;
     }
 
     .container {
         width: 80%;
+        /* Zmniejszyłem do 80%, bo na mało szerokich telefonach pojawiał się tekst po ekranem po prawej */
         padding-left: 70px;
         padding-right: 25px;
     }
@@ -470,7 +481,7 @@ details ul {
         left: 60px;
         border: medium solid white;
         border-width: 10px 10px 10px 0;
-        border-color: transparent white transparent transparent;
+        border-color: transparent rgb(0, 0, 0) transparent transparent;
     }
 
     .left::after,
@@ -487,7 +498,7 @@ details ul {
     }
 }
 
-/* kontakt - formularz */
+/* Kontakt - formularz (również użyty w kalkulatorze) */
 .contact-form {
     text-align: center;
 }
@@ -583,7 +594,7 @@ button:hover {
     text-align: center;
 }
 
-/* realizacje */
+/* Realizacje,- Galeria */
 .gallery-section {
     padding: 40px;
     background: #ffd500;
@@ -617,7 +628,7 @@ button:hover {
     padding: 15px;
 }
 
-/* Modal styles */
+/* Kod na modal (zainspirowany materiałami z w3schools), wykorzystuje on javascripta osadzonego w realizacje.html, na dole strony */
 .modal {
     display: none;
     position: fixed;
