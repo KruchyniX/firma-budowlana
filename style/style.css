@@ -63,7 +63,7 @@ nav {
 
 
 /* Dostosowanie nawigacji dla mniejszych ekranów */
-@media (max-width: 1200px) {
+@media (max-width: 1250px) {
     .burger {
         display: block;
         position: absolute;
