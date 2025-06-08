@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/6df1c8709c.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Strona główna</title>
+</head>
+<body style="font-family: 'Montserrat', serif;">
+    <nav>
+        <a href="index.html" title="Strona główna">
+            <i class="fa-solid fa-house fa-2xl" style="color: #ffffff;"></i>
+            Strona główna
+        </a>
+        <a href="uslugi.html" title="Usługi">
+            <i class="fa-solid fa-toolbox fa-2xl" style="color: #ffffff;"></i>
+            Usługi
+        </a>
+        <a href="realizacje.html" title="Realizacje">
+            <i class="fa-solid fa-helmet-safety fa-2xl" style="color: #ffffff;"></i>
+            Realizacje
+        </a>
+        <a href="kalkulator.html" title="Kalkulator">
+            <i class="fa-solid fa-calculator fa-2xl" style="color: #ffffff;"></i>
+            Kalkulator
+        </a>
+        <a href="ofirma.html" title="Informacje o Firmie">
+            <i class="fa-solid fa-building fa-2xl" style="color: #ffffff;"></i>
+            O firmie
+        </a>
+        <a href="kontakty.html" title="Kontakt">
+            <i class="fa-solid fa-envelope fa-2xl" style="color: #ffffff;"></i>
+            Kontakt
+        </a>
+    </nav>
+    <header>
+    <h1>Skontaktuj się z nami</h1>
+    <p>Masz pytanie? Jesteśmy do dyspozycji</p>
+  </header>
+<main>
+  <section class="contact-form">
+      <h2><i class="fas fa-envelope"></i> Formularz kontaktowy</h2>
+      <form>
+        <label>Imię: <input type="text" name="imie" required></label>
+        <label>Nazwisko: <input type="text" name="nazwisko" required></label>
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Telefon: <input type="tel" name="telefon"></label>
+        <label>Wiadomość: <br><textarea name="wiadomosc" rows="5" required></textarea></label>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Wyślij</button>
+      </form>
+    </section>
+
+
+    <!-- Mapa -->
+    <section class="map">
+      <h2 class="center"><i class="fas fa-map-marker-alt"></i> Nasza lokalizacja</h2>
+      <iframe width="100%" height="350" src="https://www.openstreetmap.org/export/embed.html?bbox=15.355882644653322%2C52.60925030978203%2C15.524110794067385%2C52.67554942424351&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=14/52.64241/15.44000">View Larger Map</a></small>
+    </section>
+
+    <!-- Dlaczego warto nas wybrać -->
+    <section class="why-us">
+      <h2 class="center"><i class="fas fa-thumbs-up"></i> Dlaczego warto nas wybrać?</h2>
+      <div class="box">
+        <div class="tile">
+          <div class="tile-text">
+            <i class="fas fa-tools fa-2x"></i>
+            <span>Wieloletnie doświadczenie</span>
+          </div>
+        </div>
+        <div class="tile">
+          <div class="tile-text">
+            <i class="fas fa-star fa-2x"></i>
+            <span>Najwyższa jakość usług</span>
+          </div>
+        </div>
+        <div class="tile">
+          <div class="tile-text">
+            <i class="fas fa-user-shield fa-2x"></i>
+            <span>Gwarancja i bezpieczeństwo</span>
+          </div>
+        </div>
+        <div class="tile">
+          <div class="tile-text">
+            <i class="fas fa-clock fa-2x"></i>
+            <span>Terminowość wykonania</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="contact-info">
+      <h2><i class="fas fa-phone"></i> Dane kontaktowe</h2>
+      <p><strong>Adres:</strong> ul. Przykładowa 123, 00-000 Miasto</p>
+      <p><strong>Email:</strong> kontakt@firma-budowlana.pl</p>
+      <p><strong>Telefon:</strong> +48 123 456 789</p>
+      <div class="social-media">
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
